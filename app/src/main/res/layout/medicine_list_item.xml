@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_marginLeft="10dp">
+
+    <TextView
+        android:id="@+id/medicine_name_inList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#3d3d3d"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/medicine_times_inList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3d3d3d"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>

@@ -1,38 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     //main activity 主菜单的布局
     <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/Theme.AppCompat.Light">
+            android:layout_height="wrap_content">
 
-        </android.support.v7.widget.Toolbar>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.example.healthhelper.component.RoundProgressBar
+                android:id="@+id/roundProgressBar"
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="28dp"
+                android:layout_marginTop="28dp"
+
+
+                android_custom:roundColor="#D1D1D1"
+                android_custom:roundProgressColor="@android:color/black"
+                android_custom:textColor="#9A32CD"
+                android_custom:textIsDisplayable="true"
+                android_custom:roundWidth="20dip"
+                android_custom:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/left_water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:text="今天我还需要喝:\n1500ml"
+                android:textSize="28dp"
+                android:textColor="#FFFFFF"
+                android:lineSpacingExtra="8dp"
+                android:layout_marginBottom="8dp"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </LinearLayout>
 
 
         //floatingActionButtom
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/add_water"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_done"
-            android:elevation="8dp"/>
+            app:fab_expandDirection="left"
+            app:fab_addButtonColorNormal="@color/colorAccent"
+            app:fab_addButtonColorPressed="@color/colorAccent">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:fab_colorNormal="@color/colorAccent"
+                android:src="@drawable/ic_more"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_120ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:fab_colorNormal="@color/colorAccent"
+                android:src="@drawable/ic_120ml"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_50ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:fab_colorNormal="@color/colorAccent"
+                android:src="@drawable/ic_50ml"/>
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     </android.support.design.widget.CoordinatorLayout>
 
@@ -43,6 +129,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/nav_menu"
-        app:headerLayout="@layout/nav_header"/>
+        app:headerLayout="@layout/nav_header"
+        android:fitsSystemWindows="true"/>
 
 </android.support.v4.widget.DrawerLayout>

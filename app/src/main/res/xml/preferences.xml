@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    android:layout="@layout/preference_item"
+    android:title="@string/title_activity_setting"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="设置">
+        <ListPreference
+            android:layout="@layout/preference_item"
+            android:defaultValue="1"
+            android:entries="@array/gender_options"
+            android:entryValues="@array/gender_options_values"
+            android:key="@string/list_key_1"
+            android:title="性别"
+            android:dialogTitle="请选择您的性别"
+            android:summary="@string/gender_summary_str"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:key="@string/edit_key_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dialogTitle="请输入您的体重(kg)"
+            android:title="体重"
+            android:numeric="integer"
+            android:summary="@string/weight_summary_str"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/check_key_1"
+            android:layout="@layout/preference_item"
+            android:summaryOff="未开启"
+            android:summaryOn="已开启"
+            android:title="开启运动补水" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/medicine_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/Theme.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <Button
+                android:id="@+id/medicine_list_backup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_backup"/>
+
+            <TextView
+                android:id="@+id/medicine_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="药物列表"
+                android:textSize="22dp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ListView
+            android:id="@+id/medicine_list"
+            android:divider="#00000000"
+            android:dividerHeight="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+        <com.getbase.floatingactionbutton.AddFloatingActionButton
+            android:id="@+id/add_medicine"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
