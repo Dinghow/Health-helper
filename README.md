@@ -1,11 +1,9 @@
-# App简介
-## 基本功能
-|                               | 
-| :---------------------------: | 
-|              功能               | 
-| 用户数据采集，个性化喝水量（年龄、身高、体重、是否为病人） |  
-|             喝水记录              | 
-|             容量查询              |
-|           锁屏健康知识滚动            |
-|   自行添加吃药提醒：时间、种类、提醒周期、频率、用量   |
-|              UI               | 
+# Health helper
+This is a Android application about daily health
+### Basic functions:
+- Suggestion for drinking water base on your body information
+- Water clock & record
+- Drug clock & record
+- Query about common contianer capacity
+
+This app is a semi-finished one,more function will be added in the future
