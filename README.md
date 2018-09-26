@@ -1,7 +1,7 @@
 # Health helper
 This is a Android application about daily health
 ### Basic functions:
-- Suggestion for drinking water base on your body information
+- Suggestion for drinking water based on your body information
 - Water clock & record
 - Drug clock & record
 - Query about common contianer capacity
