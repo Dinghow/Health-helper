@@ -1,5 +1,6 @@
 # Health helper
 This is a Android application about daily health
+Collaborator: @HPC
 ### Basic functions:
 - Suggestion for drinking water based on your body information
 - Water clock & record
